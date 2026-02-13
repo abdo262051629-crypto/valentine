@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<style>
+body{
+background:pink;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+flex-direction:column;
+text-align:center;
+}
+.box{
+background:white;
+padding:30px;
+border-radius:20px;
+width:80%;
+max-width:400px;
+}
+button{
+margin-top:20px;
+padding:10px 20px;
+background:red;
+color:white;
+border:none;
+border-radius:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2 id="text"></h2>
+<button onclick="start()">اضغطي هنا ❤️</button>
+</div>
+
+<script>
+let msg="كل سنة وانتي حبيبتي ❤️ بحبك اوي 💕";
+let i=0;
+function start(){
+typing();
+}
+function typing(){
+if(i<msg.length){
+document.getElementById("text").innerHTML+=msg.charAt(i);
+i++;
+setTimeout(typing,80);
+}
+}
+</script>
+
+</body>
+</html>
